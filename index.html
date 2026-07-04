@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For Nureen ❤️</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;display:flex;justify-content:center;align-items:center;height:100vh;background:linear-gradient(135deg,#ff8fb1,#ffc3d6);overflow:hidden}
+.card{background:rgba(255,255,255,.2);backdrop-filter:blur(12px);padding:30px;border-radius:24px;color:#fff;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,.2);max-width:420px}
+button{padding:12px 24px;border:none;border-radius:30px;font-size:18px;margin:8px;cursor:pointer}
+#yes{background:#fff;color:#ff3b7a}#no{background:#ff3b7a;color:#fff;position:relative}
+.heart{position:fixed;font-size:22px;animation:up 3s linear forwards}
+@keyframes up{to{transform:translateY(-110vh);opacity:0}}
+</style></head>
+<body>
+<div class="card">
+<h1>Dear Nureen ❤️</h1>
+<p>From <b>Abubakar</b></p>
+<p>Since you came into my life, every day feels brighter. I may not be perfect, but I'll always respect, support and care for you. 💖</p>
+<h2>Will you be my girlfriend? 🥹💍</h2>
+<button id="yes">Yes 💖</button>
+<button id="no">No 🙈</button>
+</div>
+<script>
+const no=document.getElementById('no');
+no.onmouseover=()=>{no.style.position='fixed';no.style.left=Math.random()*(innerWidth-100)+'px';no.style.top=Math.random()*(innerHeight-60)+'px';}
+document.getElementById('yes').onclick=()=>{
+document.body.innerHTML="<div style='display:flex;justify-content:center;align-items:center;height:100vh;color:white;font-family:Arial;text-align:center'><div><h1>Yay! ❤️</h1><h2>Thank you, Nureen! 💍</h2><p>Forever yours,<br><b>Abubakar</b></p></div></div>";
+setInterval(()=>{let h=document.createElement('div');h.className='heart';h.textContent='❤️';h.style.left=Math.random()*innerWidth+'px';h.style.bottom='-20px';document.body.appendChild(h);setTimeout(()=>h.remove(),3000)},150);
+}
+</script></body></html>
